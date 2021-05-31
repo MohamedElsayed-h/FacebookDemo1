@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<html xmlns:th="https://www.thymeleaf.org">
+
+
+<form th:action="@{/saveBlog}" th:object="${blog}" method="GET">
+    <input type="text" placeholder="Titel" th:field="*{title}"><br>
+    <input type="text" placeholder="Beskrivning" th:field="*{description}"><br>
+    <input type="text" placeholder="Skapar i" th:field="*{createdOn}"><br>
+    <input type="text" placeholder="Uppdaterar i" th:field="*{updatedOn}"><br>
+    <input type="text" placeholder="Användare" th:field="*{userName}"><br>
+    <input type="submit" value="Registrera blog">
+</form>
+
+<div th:each="blog: ${blogs}">
+    <p th:text="${blog.title}" />
+    <p th:text="${blog.description}" />
+    <p th:text="${blog.createdOn}" />
+    <p th:text="${blog.updatedOn}" />
+    <p th:text="${blog.userName}" />
+</div>
+
+</body>
+</html>

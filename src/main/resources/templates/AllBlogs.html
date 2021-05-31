@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<table>
+   <thead>
+<th>Title</th>
+<th>Description</th>
+   </thead>
+    <tbody>
+    <tr th:each="blog:${blogs}">
+<td th:text="${blog.title}"></td>
+<td th:text="${blog.description}"></td>
+
+    </tr>
+
+    </tbody>
+
+</table>
+</body>
+</html>

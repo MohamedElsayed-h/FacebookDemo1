@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div align="center">
+    <img src="facebookLogo.jpg"><br>
+    <h1>Användaren Lista</h1>
+
+
+</div>
+<!--
+<h1 style="color:blue;">A Blue Heading</h1>
+<h1 style="color:blue;">Användare</h1>
+-->
+
+
+
+<form th:action="@{/saveUser}" th:object="${user}" method="POST">
+    <br><input type="text" placeholder="Användare" th:field="*{userName}">
+    <input type="text" placeholder="Lösenord" th:field="*{password}">
+    <input type="text" placeholder="Bekräfta lösenord" th:name="passwordTwo"><br>
+
+    <tr th:each="user:${ListUsers}"></tr>
+    <input type="text" placeholder="Postmail" th:field="*{email}">
+    <input type="text" placeholder="Förnamn" th:field="*{firstname}">
+    <input type="text" placeholder="Efternamn" th:field="*{lastname}">
+    <br><input type="submit" value="Registrera user"><br><br>
+</form>
+
+<!-------------Skappa logga in------------->
+<form th:action="@{/logginUser}" method="POST">
+    <input type="text" placeholder="Användare" th:name="userName" >
+    <input type="text" placeholder="Lösenord" th:name="password" >
+    <input type="submit" value="Logga in"><br>
+   </form>
+
+<table border="1">
+    <thead>
+    <th>Förnamn</th>
+    <th>Efternamn</th>
+    <th>Postmail</th>
+    <th>Foto</th>
+    </thead>
+    <h2>Sparad användare</h2>
+    <tbody>
+       <tr th:each="user:${users}">
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.lastname}"></td>
+        <td th:text="${user.getEmail()}"></td>
+        <td th:text="${user.getImage()}"></td>
+
+      </tr>
+
+    </tbody>
+
+</table>
+<!--------------------------->
+
+<table>
+    <thead>
+    <tr>
+          <th> User ID      </th>
+          <th> userName     </th>
+          <th>   firstname  </th>
+          <th>   email      </th>
+          <th>   image      </th>
+          <th>   Actions    </th>
+    </tr>
+    </thead>
+
+    <!------------>
+    </th>
+
+    <tbody>
+
+    <tr th:each="user:${users}">
+        <td th:text="${user.id}"> ID               </td>
+        <td th:text="${user.userName}"> userName   </td>
+        <td th:text="${user.firstname}"> firstname </td>
+        <td th:text="${user.getEmail()}"> email    </td>
+        <td th:text="${user.getImage()}"> image    </td>
+        <td>
+            <form action="#" th:action="@{'/delete/' + ${user.id}}" th:method="get">
+                <button type="submit" id="submitButton">Delete</button>
+            </form>
+        </td>
+        <td>
+            <form action="#" th:action="@{ '/edit/{id}' (id=${user.id})}" th:method="get">
+                <button type="submit" >Edit</button>
+            </form>
+        </td>
+
+    </tr>
+
+
+
+    </tbody>
+
+
+
+
+</table>
+<!--
+<form th:action="@{/saveUserParam}" method="POST">
+    <input type="text" placeholder="Användare" th:name="userName"><br>
+    <input type="text" placeholder="Postmail" th:name="email"><br>
+    <input type="text" placeholder="Lösenord" th:name="passwordOne"><br>
+    <input type="text" placeholder="Bekräfta lösenord" th:name="passwordTwo"><br>
+    <input type="submit" value="Registrera user">
+</form>
+-->
+
+
+
+<p th:text="${msg}"></p>
+<!--
+<div th:each="job: ${jobs}">
+    <p th:text="${job.description}" />
+</div>
+-->
+<!------
+<form action="#" th:action="@{/save-user}" th:object="${user}" method="POST">
+    <input type="text" placeholder="Användare" th:field="*{userName}">
+    <input type="text" placeholder="Förnamn" th:field="*{firstname}">
+    <input type="text" placeholder="Efternamn" th:field="*{lastname}">
+    <input type="text" placeholder="Lösenord" th:field="*{password}">
+    <input type="text" placeholder="foto" th:field="*{image}">
+
+    <br><input type="submit" value="Update user"><br><br>
+</form>
+<!------------
+<td>
+            <form action="#" th:action="@{ '/delete/{id}' (id=${user.id})}" th:method="delete">
+                <button type="submit" id="submitButton">Delete</button>
+            </form>
+</td>
+<td>
+    <form action="#" th:action="@{ '/edit/{id}' (id=${user.id})}" th:method="get">
+        <button type="submit" >Edit</button>
+    </form>
+</td>
+-->
+</body>
+</html>
