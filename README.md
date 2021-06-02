@@ -10,6 +10,13 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
 * Spring JPA.
 
 ## KravLista:
+###Programmet ska kunna:
+* spara data i MySQL.
+* använda frontendlogik.
+* visa användarensdata.
+* bekräfta logga i.
+ 
+#### Scenarium:
 * Skapa användare.
 * Ta bort användare.
 * Lägga till profilbild.
@@ -17,7 +24,5 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
 * Skapa inlägg.
 * Läsa inlägg.
 * Ta bort användare sina egna inlägg.
- 
-#### Scenarium:
 
 ##### Use Cases:
