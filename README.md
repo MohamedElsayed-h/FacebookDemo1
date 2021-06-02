@@ -59,4 +59,7 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
 * Use case 4: Se all inlägg.
 * Use case 5: Se all användare.
 * Use case 6: Radera inlägg.
-*OBS*
+
+*OBS*:-
+* Det finns include och extend för både kontrollera lösenord och inkludera bild till inlägg.
+* Aktörer är användare, admin och MySQL.
