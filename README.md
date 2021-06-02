@@ -9,18 +9,27 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
 * * Spring MVC
 * Spring JPA.
 * Koder i pom.xml är:
-´´´
+***
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-´´´
+***
 
 ***
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+***
+
+***
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
 ***
