@@ -53,3 +53,10 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
 * Ta bort användare sina egna inlägg.
 
 ##### Use Cases:
+* Use case 1: Registrera sig.
+* Use case 2: Logga in.
+* Use case 3: Skriva inlägg
+* Use case 4: Se all inlägg.
+* Use case 5: Se all användare.
+* Use case 6: Radera inlägg.
+*OBS*
