@@ -5,16 +5,24 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
 * Dokumentation + UML.
 
 # Dependencies i programmet:
-* Spring Boot.
+* Spring Boot:
+´´´
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+´´´
 * Spring MVC
 * Spring JPA.
 
 ## KravLista:
 ###Programmet ska kunna:
-* spara data i MySQL.
+* spara data i MySQL (registrera sig i databasen).
+* logga i med usernamn och lösenord (bekräfta logga i).
 * använda frontendlogik.
 * visa användarensdata.
-* bekräfta logga i.
+
  
 #### Scenarium:
 * Skapa användare.
