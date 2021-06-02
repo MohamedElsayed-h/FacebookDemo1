@@ -13,6 +13,14 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
         </dependency>
 
 ´´´
+
+'''
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+'''
 * Spring MVC
 * Spring JPA.
 
