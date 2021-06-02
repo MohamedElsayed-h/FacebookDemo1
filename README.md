@@ -6,6 +6,9 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
 
 # Dependencies i programmet:
 * Spring Boot:
+* * Spring MVC
+* Spring JPA.
+* Koder i pom.xml är:
 ´´´
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -14,15 +17,14 @@ Uppgiften består av att bygga Webservers app liksom Facebooks startsidan via Sp
 
 ´´´
 
-'''
+***
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-'''
-* Spring MVC
-* Spring JPA.
+***
+
 
 ## KravLista:
 ###Programmet ska kunna:
